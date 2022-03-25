@@ -1,0 +1,41 @@
+@use "../base/variables" as v; 
+@use "../base/mixins" as m;
+
+
+.barra {
+    display: none;
+   
+
+    @include m.tablet {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    &__navegacion {
+        display: flex;
+        background-color: v.$secundario;
+        border-radius: 2rem;
+        padding: 2rem;
+        gap: 4rem;
+
+    }
+
+    &__link {
+       
+        color:  v.$blanco;
+        font-size: 1.8rem;
+        font-weight: 900;
+
+    }
+
+    &__nombre {
+        background-color: v.$secundario;
+        padding: 1rem;
+        border-radius: 2rem;
+        color:v.$blanco; 
+        font-size: 4rem;
+        margin: 1rem;
+    }
+}

@@ -1,0 +1,44 @@
+@use "../base/variables" as v; 
+@use "../base/mixins" as m;
+
+.destinos {
+   
+   
+    &__grid {
+
+        @include m.grid(1,2rem);
+
+        @include m.tablet {
+            @include m.grid(2,2rem);
+        }
+
+        @include m.desktop {
+            @include m.grid(4,2rem);
+        }
+
+    }
+}
+
+.destino {
+    display: flex;
+    background-color: v.$secundario;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    border-radius: 2rem;
+
+    &__imagen {
+        width: 14rem;
+        height: 14rem;
+    }
+
+    &__nombre {
+       margin: 0; 
+       color: v.$blanco;
+    }
+
+    &__distancia {
+        color: v.$blanco;
+        font-weight: 400;
+    }
+}
